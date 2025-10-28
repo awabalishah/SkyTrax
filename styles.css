@@ -1,11 +1,11 @@
 /* ===== ROOT VARIABLES ===== */
 :root {
-    --primary-color: #000000;
-    --primary-dark: #000000;
-    --primary-light: #333333;
+    --primary-color: #667eea;
+    --primary-dark: #5568d3;
+    --primary-light: #764ba2;
     --secondary-color: #fc6220;
-    --accent-color: #fc6220;
-    --text-dark: #000000;
+    --accent-color: #f093fb;
+    --text-dark: #1a1a2e;
     --text-gray: #666666;
     --text-light: #999999;
     --bg-light: #ffffff;
@@ -169,9 +169,9 @@ button {
 }
 
 .header.scroll-header {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(102, 126, 234, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
 }
 
 .nav {
@@ -307,9 +307,9 @@ button {
     height: 100%;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.5) 100%
+        rgba(102, 126, 234, 0.2) 0%,
+        rgba(118, 75, 162, 0.3) 50%,
+        rgba(26, 26, 46, 0.4) 100%
     );
     z-index: 1;
 }
@@ -325,7 +325,7 @@ button {
     background: radial-gradient(
         ellipse at center,
         transparent 0%,
-        rgba(0, 0, 0, 0.2) 100%
+        rgba(102, 126, 234, 0.15) 100%
     );
 }
 
@@ -493,8 +493,11 @@ button {
     background: var(--bg-white);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    padding: 50px 40px;
+    padding: 0;
     transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -503,20 +506,56 @@ button {
     transform: translateY(-8px);
 }
 
-.service-card__icon {
-    width: 70px;
-    height: 70px;
-    background: var(--primary-color);
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
+.service-card__image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 0;
 }
 
-.service-card__icon i {
-    font-size: 2rem;
-    color: var(--bg-white);
+.service-card__image--umrah {
+    background-image: url('images/services/umrah.jpg');
+}
+
+.service-card__image--hajj {
+    background-image: url('images/services/hajj.jpg');
+}
+
+.service-card__image--visa {
+    background-image: url('images/services/visa.jpg');
+}
+
+.service-card__image--flight {
+    background-image: url('images/services/flight.jpg');
+}
+
+/* Content wrapper for padding */
+.service-card > h3,
+.service-card > p,
+.service-card > ul,
+.service-card > a {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.service-card > h3 {
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+.service-card > p {
+    padding-bottom: 20px;
+}
+
+.service-card > ul {
+    padding-bottom: 24px;
+}
+
+.service-card > a {
+    padding-bottom: 40px;
 }
 
 .service-card__title {
@@ -718,12 +757,37 @@ button {
 .feature-card__icon {
     width: 80px;
     height: 80px;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 24px;
+}
+
+/* Individual colorful icons for each feature */
+.feature-card:nth-child(1) .feature-card__icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.feature-card:nth-child(2) .feature-card__icon {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.feature-card:nth-child(3) .feature-card__icon {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.feature-card:nth-child(4) .feature-card__icon {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.feature-card:nth-child(5) .feature-card__icon {
+    background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+.feature-card:nth-child(6) .feature-card__icon {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
 .feature-card__icon i {
@@ -1099,7 +1163,7 @@ button {
 
 /* ===== CTA SECTION ===== */
 .cta {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: var(--bg-white);
 }
 
@@ -1153,7 +1217,7 @@ button {
 
 /* ===== FOOTER ===== */
 .footer {
-    background: var(--text-dark);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     color: var(--bg-white);
     padding: 60px 0 0;
 }
@@ -1292,7 +1356,7 @@ button {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: var(--bg-white);
     border-radius: 50%;
     display: flex;
@@ -1314,6 +1378,78 @@ button {
 .scroll-top:hover {
     background: var(--secondary-color);
     transform: translateY(-5px);
+}
+
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: var(--transition);
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--text-dark);
+    color: var(--bg-white);
+    padding: 8px 16px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: 0.875rem;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 8px solid transparent;
+    border-left-color: var(--text-dark);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1624,6 +1760,22 @@ button {
 
     .service-card {
         padding: 24px;
+    }
+
+    /* WhatsApp Button Mobile Positioning */
+    .whatsapp-float {
+        bottom: 20px;
+        left: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.75rem;
+    }
+
+    .whatsapp-tooltip {
+        display: none;
     }
 }
 

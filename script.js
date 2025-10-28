@@ -233,5 +233,5 @@ if (heroSlides.length > 1) {
 console.log('%cSkyTrax Travel Agency', 'color: #0066cc; font-size: 24px; font-weight: bold;');
 console.log('%cWebsite loaded successfully!', 'color: #00a86b; font-size: 14px;');
 console.log('For inquiries, contact: skytraxpk@gmail.com');
-console.log('Phone: +92 313 6936090 | +92 333 4444573');
+console.log('Phone: +92 313 6936090 | +92 330 4724720');
 
